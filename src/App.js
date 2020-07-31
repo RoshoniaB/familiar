@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Todo from './Todo';
+import Todo from './Todo/Todo';
 import Daily from './Daily';
 import Advice from './Advice';
 import { Route, Link } from 'react-router-dom';
@@ -14,8 +14,8 @@ class App extends Component {
 						<img className='house' src={require(`./images/house.png`)} alt='' />
 					</Link>
 				</nav>
-				<header className='homelnks' >
-					<Link exact  to='/todo' >Todo</Link>
+				<header className='homelnks'  >
+					<Link exact to='/todo' >Todo</Link>
 					<br></br>
 					<Link exact to='/advice'>Advice</Link>
 					<br></br>
@@ -23,8 +23,8 @@ class App extends Component {
 				</header>
 				<main>
 					<Route path='/todo' component={Todo} />
-					<Route path='/advice' component={Advice} />
-					<Route path='/daily' component={Daily} />
+					{/* <Route path='/advice' component={Advice} /> */}
+					{/* <Route path='/daily' component={Daily} /> */}
 				</main>
 			</div>
 		);

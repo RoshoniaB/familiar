@@ -15,9 +15,9 @@ class App extends Component {
 					</Link>
 				</nav>
 				<header className='homelnks'  >
-					<Link exact to='/todo' >Todo</Link>
+					<Link exact="true" to='/todo' >Todo</Link>
 					<br></br>
-					<Link exact to='/advice'>Advice</Link>
+					<Link exact="true" to='/advice'>Advice</Link>
 					<br></br>
 					<Link to='/daily'>Daily</Link>
 				</header>

@@ -13,9 +13,17 @@ class AddTodo extends Component {
 	};
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.addFunc(this.state.todoValue);
+		this.props.onSubmit({
+            todoValue: this.state.todoValue,
+            complete: false,
+            id: this.state.todoValue
+        })
+        this.setState({
+            todoValue: ' '
+        })
 		
-	};
+    };
+    
 
 	render() {
 		return (
@@ -25,8 +33,9 @@ class AddTodo extends Component {
 						type='text'
 						style={{ flex: '10', padding: '5px' }}
 						onChange={this.inputHandler}
+						value={this.state.todoValue}
 					/>
-					<input type='submit' value='Submit' className='btn' />
+					<button onClick={this.handleSubmit}>add todo</button>
 				</form>
 				<main></main>
 			</div>

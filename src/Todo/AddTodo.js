@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import shortid from 'shortid';
 
 class AddTodo extends Component {
 	constructor() {
@@ -13,8 +14,13 @@ class AddTodo extends Component {
 	};
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.addFunc(this.state.todoValue);
-		
+		this.props.onSubmit({
+			todoValue: this.state.todoValue,
+			id: shortid.generate(),
+		});
+		this.setState({
+			todoValue: ' ',
+		});
 	};
 
 	render() {
@@ -23,15 +29,18 @@ class AddTodo extends Component {
 				<form onSubmit={this.handleSubmit}>
 					<input
 						type='text'
-						style={{ flex: '10', padding: '5px' }}
+						className='todoForm'
 						onChange={this.inputHandler}
+						value={this.state.todoValue}
 					/>
-					<input type='submit' value='Submit' className='btn' />
+					<button className='btn' onClick={this.handleSubmit}>
+						Add todo
+					</button>
 				</form>
-				<main></main>
 			</div>
 		);
 	}
 }
+
 
 export default AddTodo;

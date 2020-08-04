@@ -8,25 +8,38 @@ import './App.css';
 class App extends Component {
 	render() {
 		return (
-			<div>
-				<nav>
-					<Link  to='/'>
+			<body>
+				<header className='header'>
+					<Link exact to='/'>
 						<img className='house' src={require(`./images/house.png`)} alt='' />
 					</Link>
-				</nav>
-				<header className='homelnks'  >
-					<Link exact to='/todo' >Todo</Link>
-					<br></br>
-					<Link exact to='/advice'>Advice</Link>
-					<br></br>
-					<Link to='/daily'>Daily</Link>
+					<h1
+						style={{
+							color: '#B9CBD9',
+							textAlign: 'center',
+							fontSize: '60px ',
+						}}>
+						Familiar
+					</h1>
+					<Link exact to='/todo' className='homelnks'>
+						Todo
+					</Link>
+
+					<Link to='/advice' className='homelnks'>
+						Advice
+					</Link>
+
+					<Link to='/daily' className='homelnks'>
+						Daily
+					</Link>
 				</header>
-				<main>
+
+				<main className='container'>
+					<Route path='/advice' component={Advice} />
+					<Route path='/daily' component={Daily} />
 					<Route path='/todo' component={Todo} />
-					{/* <Route path='/advice' component={Advice} /> */}
-					{/* <Route path='/daily' component={Daily} /> */}
 				</main>
-			</div>
+			</body>
 		);
 	}
 }

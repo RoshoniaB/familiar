@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
-import AddTodo from './AddTodo';
 import '../App.css';
-class TodoItem extends Component {
-	constructor() {
-		super();
-		this.state = {};
-	}
 
+class TodoItem extends Component {
 	render() {
-		const { todos } = this.props;
-		// console.log(todos)
+		const { text, deleteItem } = this.props;
+
 		return (
-			<div>
-				{todos.map((todos) => {
-					return (
-						<ol>
-							<input type='checkbox' />
-							{todos}
-						</ol>
-					);
-				})}
+			<div style={{ display: 'flex', justifyContent: 'center' }}>
+				<div style={{ color: '#287CE1' }}>
+					<input type='checkbox' />
+					{text}
+				</div>
+				<main>
+					<button onClick={deleteItem} style={{backgroundColor:'red'}}>X</button>
+				</main>
 			</div>
 		);
 	}

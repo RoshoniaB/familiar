@@ -5,11 +5,12 @@
 .homelnks {
 	font-size: 50px;
 	padding: 50px 50px 0px 290px;
-	margin: 35px;
-
+	margin: 5px;
+  display: inline-block;
 	font-weight: 800;
 	text-decoration: none;
-	color: #fcc9c5;
+  color: #fcc9c5;
+  
 }
 .header {
 	background-color: #92908d;

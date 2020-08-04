@@ -2,6 +2,7 @@
 .house {
 	max-width: 30px;
 	max-height: 30px;
+	
 }
 .homelnks {
 	font-size: 50px;
@@ -14,12 +15,14 @@
 }
 .header {
 	background-color: #EAE7E2;
+	text-align: center;
 }
+
 .container {
 	background-color: #B9CBD9;
 	height: 100em;
 	font-size: 25px;
-}
+}	
 .todoForm{
  width: 80%;
   padding: 12px 20px;

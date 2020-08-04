@@ -15,15 +15,13 @@ class AddTodo extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		this.props.onSubmit({
-            todoValue: this.state.todoValue,
-            id: shortid.generate(),
-        })
-        this.setState({
-            todoValue: ' '
-        })
-		
-    };
-    
+			todoValue: this.state.todoValue,
+			id: shortid.generate(),
+		});
+		this.setState({
+			todoValue: ' ',
+		});
+	};
 
 	render() {
 		return (
@@ -31,13 +29,14 @@ class AddTodo extends Component {
 				<form onSubmit={this.handleSubmit}>
 					<input
 						type='text'
-						className="todoForm"
+						className='todoForm'
 						onChange={this.inputHandler}
 						value={this.state.todoValue}
 					/>
-					<button className="btn" onClick={this.handleSubmit}>add todo</button>
+					<button className='btn' onClick={this.handleSubmit}>
+						Add todo
+					</button>
 				</form>
-				<main></main>
 			</div>
 		);
 	}

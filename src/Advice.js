@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import App from './App';
 
 class Advice extends Component {
 	constructor() {
@@ -21,11 +20,8 @@ class Advice extends Component {
 	render() {
 		return (
 			<main>
-				<form>
-					<button>Need Advice?</button>
-				</form>
 				<h1 style={{ color: '#6b615a', textAlign: 'center' }}>
-					{this.state.slip.advice}
+					"{this.state.slip.advice}""
 				</h1>
 			</main>
 		);

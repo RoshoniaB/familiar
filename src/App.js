@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import Todo from './Todo/Todo';
 import Daily from './Daily';
 import Advice from './Advice';
-import { Route, Link, NavLink } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './App.css';
 
-
 class App extends Component {
-
 	render() {
 		return (
 			<body>
@@ -16,7 +14,11 @@ class App extends Component {
 						<img className='house' src={require(`./images/house.png`)} alt='' />
 					</Link>
 					<h1
-						style={{ color: '#B9CBD9', textAlign: 'center', fontSize: '60px ' }}>
+						style={{
+							color: '#B9CBD9',
+							textAlign: 'center',
+							fontSize: '60px ',
+						}}>
 						Familiar
 					</h1>
 					<Link exact to='/todo' className='homelnks'>
@@ -34,7 +36,7 @@ class App extends Component {
 
 				<main className='container'>
 					<Route path='/advice' component={Advice} />
-					{/* <Route path='/daily' component={Daily} /> */}
+					<Route path='/daily' component={Daily} />
 					<Route path='/todo' component={Todo} />
 				</main>
 			</body>

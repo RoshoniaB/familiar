@@ -19,7 +19,6 @@ class Todo extends Component {
 	AddTodo = (todo) => {
 		this.setState({ todos: [todo, ...this.state.todos] });
 		localStorage.setItem('todos', JSON.stringify(this.state.todos));
-		// console.log(localStorage.getItem('todos'));
 	};
 	deleteItem = (id) => {
 		this.setState({
@@ -33,7 +32,6 @@ class Todo extends Component {
 	};
 
 	render() {
-
 		return (
 			<div>
 				<AddTodo onSubmit={this.AddTodo} />

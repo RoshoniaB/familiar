@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import App from './App';
 
 class Daily extends Component {
 	constructor() {
@@ -16,7 +15,6 @@ class Daily extends Component {
 			.then((res) => res.json())
 			.then((res) => {
 				this.setState({ affirmation: res.affirmation });
-				// console.log(res.affirmation);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -26,7 +24,7 @@ class Daily extends Component {
 	render() {
 		return (
 			<main>
-                <h1 style={{color:'#6b615a'}}>Daily affirmations</h1>
+				<h1 style={{ color: '#6b615a' }}>Daily affirmations</h1>
 				<h2 style={{ color: '#63786e', textAlign: 'center' }}>
 					"{this.state.affirmation}"!
 				</h2>

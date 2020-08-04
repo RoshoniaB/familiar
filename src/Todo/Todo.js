@@ -12,8 +12,8 @@ class Todo extends Component {
 	componentDidMount = () => {
 		const todos = localStorage.getItem('todos');
 		if (todos) {
-			const savedTodos = JSON.parse(todos);
-			this.setState({ todos: savedTodos });
+			const storedTD = JSON.parse(todos);
+			this.setState({ todos: storedTD });
 		}
 	};
 	AddTodo = (todo) => {
@@ -47,5 +47,5 @@ class Todo extends Component {
 		);
 	}
 }
-
+///////// Got some inspiration from this youtuber https://www.youtube.com/watch?v=ZcD5rJKm3Lk ///////
 export default Todo;

@@ -4,13 +4,14 @@ import Daily from './Daily';
 import Advice from './Advice';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
+import Home from './Todo/Home';
 
 class App extends Component {
 	render() {
 		return (
-			<body>
+			<div>
 				<header className='header'>
-					<Link exact to='/'>
+					<Link exact to='/' >
 						<img className='house' src={require(`./images/house.png`)} alt='' />
 					</Link>
 					<h1
@@ -35,11 +36,15 @@ class App extends Component {
 				</header>
 
 				<main className='container'>
+					<Route exact path='/' component={Home}/>
 					<Route path='/advice' component={Advice} />
 					<Route path='/daily' component={Daily} />
 					<Route path='/todo' component={Todo} />
 				</main>
-			</body>
+				<body>
+					
+				</body>
+			</div>
 		);
 	}
 }

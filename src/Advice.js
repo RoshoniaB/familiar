@@ -17,12 +17,13 @@ class Advice extends Component {
 			});
 	}
 
+
 	render() {
 		return (
 			<main>
-				<h1 style={{ color: '#6b615a', textAlign: 'center' }}>
-					"{this.state.slip.advice}""
-				</h1>
+				<button onClick={this.state.slip.advice} style={{ color: '#6b615a', textAlign: 'center' }}>
+					Need Advice
+				</button>
 			</main>
 		);
 	}

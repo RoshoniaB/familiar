@@ -21,9 +21,9 @@ class Advice extends Component {
 	render() {
 		return (
 			<main>
-				<button onClick={this.state.slip.advice} style={{ color: '#6b615a', textAlign: 'center' }}>
-					Need Advice
-				</button>
+				<h1 style={{ color: '#6b615a', textAlign: 'center', padding: '70px 50px 0px 290px' }}>
+					{this.state.slip.advice} 
+				</h1>
 			</main>
 		);
 	}

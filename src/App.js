@@ -4,7 +4,7 @@ import Daily from './Daily';
 import Advice from './Advice';
 import { Route, Link } from 'react-router-dom';
 import './App.css';
-import Home from './Todo/Home';
+import Home from './Home';
 
 class App extends Component {
 	render() {

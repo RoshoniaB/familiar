@@ -1,20 +1,39 @@
+/* App.js */
 .house {
-    max-width: 30px;
-    max-height: 30px;
+	max-width: 30px;
+	max-height: 30px;
 }
-.homelnks{
-    font-size: 20px;
-  text-decoration: none;
-  padding: 50px 0px 0px 60px;
-  
+.homelnks {
+	font-size: 50px;
+	padding: 50px 0px 0px 60px;
+	margin: 20px;
+	text-align: center;
+	font-weight: 800;
+	text-decoration: none;
+	color: #FCC9C5;
 }
-:link{
-   text-decoration:none;
-   color: black;
-   font-weight: 800;
-   
+.header {
+	background-color: #EAE7E2;
 }
-
-.checkbox{
-  text-decoration: line-through;
+.container {
+	background-color: #B9CBD9;
+	height: 100em;
+	font-size: 25px;
+}
+.todoForm{
+ width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.btn{
+   padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  font-size: 20px;
+  color: #c5968f;
+  background-color:  ;
 }

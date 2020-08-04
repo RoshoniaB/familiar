@@ -8,16 +8,15 @@ class TodoItem extends Component {
 		const {text, deleteItem }= this.props
 		
 		return (
-			<div style={{display: "flex" , justifyContent:"center"}}>
-			<div  >
-				{text}
-			</div>	
-			<main>
-				<button onClick={deleteItem}>x</button>
-			</main>
+			<div style={{ display: 'flex', justifyContent: 'center' }}>
+				<div style={{ color: '#287CE1' }}>
+					<input type='checkbox' />
+					{text}
+				</div>
+				<main>
+					<button onClick={deleteItem}>x</button>
+				</main>
 			</div>
-
-
 		);
 	}
 }

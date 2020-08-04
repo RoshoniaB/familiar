@@ -2,31 +2,42 @@ import React, { Component } from 'react';
 import Todo from './Todo/Todo';
 import Daily from './Daily';
 import Advice from './Advice';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, NavLink } from 'react-router-dom';
 import './App.css';
 
+
 class App extends Component {
+
 	render() {
 		return (
-			<div>
-				<nav>
-					<Link  to='/'>
+			<body>
+				<header className='header'>
+					<Link exact to='/'>
 						<img className='house' src={require(`./images/house.png`)} alt='' />
 					</Link>
-				</nav>
-				<header className='homelnks'  >
-					<Link exact="true" to='/todo' >Todo</Link>
-					<br></br>
-					<Link exact="true" to='/advice'>Advice</Link>
-					<br></br>
-					<Link to='/daily'>Daily</Link>
+					<h1
+						style={{ color: '#B9CBD9', textAlign: 'center', fontSize: '60px ' }}>
+						Familiar
+					</h1>
+					<Link exact to='/todo' className='homelnks'>
+						Todo
+					</Link>
+
+					<Link to='/advice' className='homelnks'>
+						Advice
+					</Link>
+
+					<Link to='/daily' className='homelnks'>
+						Daily
+					</Link>
 				</header>
-				<main>
-					<Route path='/todo' component={Todo} />
-					{/* <Route path='/advice' component={Advice} /> */}
+
+				<main className='container'>
+					<Route path='/advice' component={Advice} />
 					{/* <Route path='/daily' component={Daily} /> */}
+					<Route path='/todo' component={Todo} />
 				</main>
-			</div>
+			</body>
 		);
 	}
 }

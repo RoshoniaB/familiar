@@ -5,7 +5,7 @@ class Home extends Component {
         return (
 					<div>
 
-						<h1 style={{ color: '#695958', textAlign: 'center', padding: "200px 50px 0px 290px", fontSize:"70px"}}>
+						<h1 className="homequote" >
 							Let Familiar be a helping hand!
 						</h1>
 					</div>

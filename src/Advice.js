@@ -21,7 +21,7 @@ class Advice extends Component {
 	render() {
 		return (
 			<main>
-				<h1 style={{ color: '#6b615a', textAlign: 'center', padding: '70px 50px 0px 290px' }}>
+				<h1 className="advicehead" >
 					{this.state.slip.advice} 
 				</h1>
 			</main>
